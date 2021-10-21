@@ -2,11 +2,16 @@
 using namespace std;
 int main()
 {
-	cout << "Please enter two numbers to calculate their arithmetic mean" << endl;
-	double a, b, P;
+	cout << "Please enter two numbers to find the difference, composition and quotient of their modules" << endl;
+	double a, b, S, P, R, Y, T, E;
 	cin >> a;
 	cin >> b;
-	P =(a + b)/2;
-	cout << "arithmetic mean=" << P << endl; 
+	S = abs(a);
+	P = abs(b);
+	R = S + P;
+	Y = S - P;
+	T = S * P;
+	E = S / P;
 
+	cout << "sum=" << R << endl << "difference=" << Y << endl << "composition=" << T << endl << "quotient=" << E << endl;
 }
