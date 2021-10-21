@@ -1,10 +1,12 @@
 #include <iostream>
 using namespace std;
-int main()  
+int main()
 {
-	cout << "enter the diameter of the circle" << endl;
-	double d, L, p=3.14;
-	cin >> d;
-	L = d * p;
-	cout << "length ="<< L << endl;
+	cout << "Please enter two numbers to calculate their arithmetic mean" << endl;
+	double a, b, P;
+	cin >> a;
+	cin >> b;
+	P =(a + b)/2;
+	cout << "arithmetic mean=" << P << endl; 
+
 }
