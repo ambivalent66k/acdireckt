@@ -1,14 +1,10 @@
 #include <iostream>
 using namespace std;
-int main()
+int main()  
 {
-	cout << "Please enter the lengths of the sides a and b" << endl;
-	double a, b, S, P;
-	cin >> a;
-	cin >> b;
-	S = a * b;
-	P = 2 * (a + b);
-	cout << "S=" << S << endl << "P=" << P << endl;
-
-
+	cout << "enter the diameter of the circle" << endl;
+	double d, L, p=3.14;
+	cin >> d;
+	L = d * p;
+	cout << "length ="<< L << endl;
 }
