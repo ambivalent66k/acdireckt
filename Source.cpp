@@ -1,17 +1,79 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 int main()
 {
-	cout << "Please enter two numbers to find the difference, composition and quotient of their modules" << endl;
-	double a, b, S, P, R, Y, T, E;
-	cin >> a;
-	cin >> b;
-	S = abs(a);
-	P = abs(b);
-	R = S + P;
-	Y = S - P;
-	T = S * P;
-	E = S / P;
+	setlocale(0, "rus");
+	double q,x1, x2, y1, y2, x3, y3, l, A, B, C, AC, BC,  P, S, p;
+	{
+    cout << "Задача 1:Найти расстояние между двумя точками с заданными координатами (x1, y1) и (x2, y2)" << endl;
+	cout << "Введите значение координат x1 и y1" << endl;
+	cin >> x1 >> y1;
+	cout << "Введите значение координат x2 и y2" << endl;
+	cin >> x2 >> y2;
+	l = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	cout <<"расстояние между двумя точками равно " << l << endl;
+	}	
+    
+	{ 
+		cout << "Задача 2:Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму" << endl;
+		cout << "A=";
+		cin >> A;
+		cout << "B=";
+		cin >> B;
+		cout << "C=";
+		cin >> C;
+		if (C < B) {
+			cout << "C-некоректное значение C-должно быть больше B" << endl;
+		}
+		else 
+		{
+			AC = abs(C - A);
+			BC = abs(C - B);
+			l = (AC + BC);
+			cout << "AC=" << AC << endl << "BC=" << BC << endl << "Сумма отрезков равна " << l << endl;
+		}
+	}
+	{
+		cout << "Задача3:Даны три точки A, B, C на числовой оси. Точка C расположена между точками A и B.Найти произведение длин отрезков AC и BC" << endl;
+		cout << "A=";
+		cin >> A;
+		cout << "B=";
+		cin >> B;
+		cout << "C=";
+		cin >> C;
+		if(C>B){
+			cout << "C-некорректное значение C- должно быть меньше B" << endl;
+		}
+		else {
+			AC = abs(C - A);
+			BC = abs(C - B);
+			l = (AC * BC);
+			cout << "произведение длин отрезков AC и BC равно " << l << endl; 
+		}
+		{ 
+			cout << "Задача 4: Даны координаты двух противоположных вершин прямоугольника:(x1, y1), (x2, y2).Стороны прямоугольника параллельны осям координат.Найти периметр и площадь данного прямоугольника." << endl;
+		cout << "Введите значение координат x1 и y1" << endl;
+		cin >> x1 >> y1;
+		cout << "Введите значение координат x2 и y2" << endl;
+		cin >> x2 >> y2;
+		P = 2 * (abs(x1 - x2) + abs(y1 - y2));
+		S = abs(x1 - x2) * abs(y1 - y2);
+		cout << "Периметр прямоугольника равен " << P << endl << "Площадь прямоугольника равна " << S << endl; 
+		}
+		cout << "Задача 5: Даны координаты трех вершин треугольника: (x1, y1), (x2, y2), (x3, y3). Найти его периметр и площадь." << endl;
+			cout << "Введите значение координат x1 и y1" << endl;
+		cin >> x1 >> y1;
+		cout << "Введите значение координат x1 и y1" << endl;
+		cin >> x2 >> y2;
+		cout << "Введите значение координат x3 и y3" << endl;
+		cin >> x3 >> y3;
+		P = (sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))) + (sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2))) + (sqrt(pow((x1 - x3), 2) + pow((y1 - y3), 2)));
+		p = P / 2;
+		S = sqrt(p * (p - (sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)))) * (p - (sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2)))) * (p - (sqrt(pow((x1 - x3), 2) + pow((y1 - y3), 2)))));
+		cout << "Периметр треугольника равен " << P << endl << "Площадь треугольника равна " << S << endl;
 
-	cout << "sum=" << R << endl << "difference=" << Y << endl << "composition=" << T << endl << "quotient=" << E << endl;
+	}
+		
+	
 }
