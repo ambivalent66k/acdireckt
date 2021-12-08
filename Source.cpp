@@ -1,17 +1,53 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
-int main()
-{
-	cout << "Please enter two numbers to find the difference, composition and quotient of their modules" << endl;
-	double a, b, S, P, R, Y, T, E;
-	cin >> a;
-	cin >> b;
-	S = abs(a);
-	P = abs(b);
-	R = S + P;
-	Y = S - P;
-	T = S * P;
-	E = S / P;
+int main() {
+	setlocale(0, "rus");
+	double a, b, c, d,f;
+	cout << "Задача 1: Дан размер файла в байтах. Найти количество полных килобайтов, которые занимает данный файл " << endl;
+		cout << "Введите количество байт ";
+		cin >> a;
+		c = a / 1024;
+		b = floor(c);
+		cout << "Количество полных килобайт равно: " << b << endl;
+		{
+			cout << "Задача 2:Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти количество отрезков B, размещенных на отрезке A. " << endl;
+			cout << "A=";
+				cin >> a;
+				cout << "B=";
+				cin >> b;
+				c = a / b;
+				d = floor(c);
+				cout << "Количество отрезков B, размещенных на отрезке A равно: " << d << endl;
 
-	cout << "sum=" << R << endl << "difference=" << Y << endl << "composition=" << T << endl << "quotient=" << E << endl;
+				{
+					cout << "Задача 2:Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A." << endl;
+					cout << "A=";
+					cin >> a;
+					cout << "B=";
+					cin >> b;
+					c = a / b;
+					d = floor(c);
+					f = a - d * b;
+					cout << "Длина не занятой части отрезка A равна " << f << endl;
+				}
+				{
+					int a, b;
+					cout << "Задача 4: Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа." << endl;
+					cout << "Введите двузначное число: ";
+					cin >> a;
+					b = a / 10 + a % 10 * 10;
+					cout << "Число при перестановке цифр: " << b << endl;
+				}
+				{int a, b;
+					cout << "Трехзначное число:";
+					cin >> a;
+					cout << endl;
+
+					b = (a % 100 / 10 * 100) + (a % 10) * 10 + a / 100;
+					cout << "Полученное число:" << b;
+				}
+
+		}
+
 }
