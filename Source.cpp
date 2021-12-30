@@ -1,17 +1,108 @@
-#include <iostream>
+﻿#include <iostream>
+#include<math.h>
 using namespace std;
-int main()
-{
-	cout << "Please enter two numbers to find the difference, composition and quotient of their modules" << endl;
-	double a, b, S, P, R, Y, T, E;
-	cin >> a;
-	cin >> b;
-	S = abs(a);
-	P = abs(b);
-	R = S + P;
-	Y = S - P;
-	T = S * P;
-	E = S / P;
 
-	cout << "sum=" << R << endl << "difference=" << Y << endl << "composition=" << T << endl << "quotient=" << E << endl;
+int main() {
+	setlocale(0, "Rus");
+	cout << "Задача 1:. Даны два целых числа: A, B. Проверить истинность высказывания: «Справедливы неравенства A > 2 и B <= 3»" << endl;
+	int A, B, C;
+	cout << "A:";
+	cin >> A;
+	cout << endl;
+	cout << "B:";
+	cin >> B;
+
+	if (A > 2 && B <= 3) {
+		cout << "Истинно" << endl;
+	}
+	else {
+		cout << "Ложь" << endl;
+	}
+	{
+		cout << "Задача 2:Даны три целых числа: A, B, C. Проверить истинность высказывания: «Справедливо двойное неравенство A < B < C»." << endl;
+		cout << "A:";
+		cin >> A;
+		cout << "B:";
+		cin >> B;
+		cout << "C:";
+		cin >> C;
+
+		if (A < B && B < C) {
+			cout << "Истинно" << endl;
+		}
+		else {
+			cout << "Ложь" << endl;
+		}
+
+	}
+	{
+		cout << "Задача 3:Дано целое положительное число. Проверить истинность высказывания: «Данное число является четным двузначным»." << endl;
+		cout << "A:";
+		cin >> A;
+		if (A % 2 == 0 && A > 9 && A < 100) {
+			cout << "Истинно" << endl;
+		}
+		else
+		{
+			cout << "Ложь" << endl;
+		}
+	}
+		{
+			cout << "Задача 4: Дано трехзначное число. Проверить истинность высказывания: «Цифры данного числа образуют возрастающую или убывающую последовательность»." << endl;
+			cout << "A:";
+			cin >> A;
+
+
+			if ((A / 100) > (A % 100 / 10) && (A % 100 / 10) > (A % 10) || (A / 100) < (A % 100 / 10) && (A % 100 / 10) < (A % 10)) {
+				cout << "Истинно" << endl;
+			}
+			else {
+				cout << "Ложь" << endl;
+			}
+		}
+			{
+				cout << "Задача 5:Дано четырехзначное число. Проверить истинность высказывания: «Данное число читается одинаково слева направо и справа налево». " << endl;
+				cout << "A:";
+				cin >> A;
+
+				A = abs(A);
+				if ((A % 10 == A / 1000 & A % 100 / 10 == A % 1000 / 100)) {
+					cout << "Истинно" << endl;
+				}
+				else {
+					cout << "Ложь" << endl;
+				}
+				{
+					cout << "Задача 6:Даны целые числа a, b, c, являющиеся сторонами некоторого треугольника. Проверить истинность высказывания: «Треугольник со сторонами a, b, c является прямоугольным»." << endl;
+					cout << "A:";
+					cin >> A;
+					cout << "B:";
+					cin >> B;
+					cout << "C:";
+					cin >> C;
+
+					if ((A * A == B * B + C * C) || (B * B == A * A + C * C) || (C * C == A * A + B * B)) {
+						cout << "Истинно" << endl;
+					}
+					else {
+						cout << "Ложь" << endl;
+					}
+				}
+				{
+					cout << "Задача 7:Даны целые числа a, b, c. Проверить истинность высказывания: «Существует треугольник со сторонами a, b, c»." << endl;
+					cout << "A:";
+					cin >> A;
+					cout << "B:";
+					cin >> B;
+					cout << "C:";
+					cin >> C;
+
+					if ((A + B) > C && (A + C) > B && (B + C) > A) {
+						cout << "Истинно" << endl;
+					}
+					else {
+						cout << "Ложь" << endl;
+					}
+				}
+	}
 }
